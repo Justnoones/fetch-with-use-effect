@@ -1,0 +1,19 @@
+{
+    "trip" : [
+        {
+            "id" : 1,
+            "name" : "2 nights in Chaung Thar",
+            "price" : 100000
+        },
+        {
+            "id" : 2,
+            "name" : "1 night in Kalaw",
+            "price" : 120000
+        },
+        {
+            "id" : 3,
+            "name" : "3 nights in Ngapali",
+            "price" : 30000
+        }
+    ]
+}
