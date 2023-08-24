@@ -1,19 +1,14 @@
+import React, { useState } from 'react';
 import './App.css';
 import TripList from './components/TripList/index';
-import { useState } from 'react';
 
 function App() {
-  let [trip, setTrip] = useState([]);
-  fetch("http://localhost:3001/trip")
-    .then(res => res.json())
-    .then(data => {
-      // setTrip(data);
-      // console.log(trip);
-    });
+  let [hideTrip, setHideTrip] = useState(false);
   return (
-    <div>
-      <TripList />
-    </div>
+    <>
+      <button onClick={_=> setHideTrip(true)}>Hide Trips</button>
+      {!hideTrip && <TripList />}
+    </>
   );
 }
 
