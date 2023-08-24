@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import './index.css'
 import { useEffect, useState } from 'react';
 
 export default function TripList() {
   let [trips, setTrips] = useState([]);
+
   let [url, setUrl] = useState("http://localhost:3001/trip");
-  useEffect(() => {
+
+  let fetchTrip = useCallback(() => {
     fetch(url)
       .then(res => res.json())
       .then(data => {
         setTrips(data);
       });
   }, [url]);
+
+  useEffect(() => {
+    fetchTrip();
+  }, [fetchTrip]);
+  
   return (
     <div>
       <h1>Ready To Go?</h1>
