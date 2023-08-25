@@ -1,0 +1,21 @@
+we can't use primitive data types in useEffect
+that caues infinite rerendering
+
+
+reference data types
+
+-string
+-number
+-bollean
+-null
+-undefined
+
+primitive data types
+
+-function
+-array
+-object
+
+
+we can use useCallback() on function
+and useRef() or useState on array and object
